@@ -221,7 +221,7 @@ body {
     .main-section {
         height: 50vh;
         width: 100%;
-        /* margin-top: 5rem; */
+        margin-top: 120px;
         /* margin-bottom: 5rem; */
     }
     .heading {
@@ -235,8 +235,8 @@ body {
     }
 
     .intro-course {
-        /* margin: 0 10px 10px 0; */
-        /* padding: 56px 32px; */
+        margin: 0 10px 10px 0;
+        padding: 56px 32px;
     }
     .courses {
         width: 100%;
@@ -264,46 +264,6 @@ body {
         /* width: 90%; */
     }
 }
-/* @media (min-width: 992px) {
-    .img {    
-        height: 800px;
-        background-image: url(./assets/image-hero-desktop.png);
-        background-position: 0px -120px;
-        background-size: auto 110%;
-        z-index: -1;
-    }
-  
-    .heading {
-        font-size: 56px;
-        line-height: 70px;
-    }
-    .main {
-        width: 90%;
-        max-width: 1140px;
-        margin: auto;
-        margin-bottom: 300px;
-    }
-    .courses {
-        width: 95%;
-        height: 600px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(2, 44%);
-        gap: 56px 30px;
-    }
-
-    .intro {
-        font-size: 29px;
-    }
-    .intro,
-    .course {
-        width: 100%;
-    }
-    .footer {
-
-        margin: auto;
-        padding: 0 20%;
-    }
-}  */
 
 @media (min-width: 1200px) {
     .img {    
@@ -345,10 +305,14 @@ body {
         padding-bottom: 60px;
     }
 
-    .footer, .main {
+    .main {
         margin: auto;
-        width: 80%;
+        width: 85%;
         max-width: 1140px;
 
+    }
+    .footer {
+        margin: auto;
+        padding: 0 21%;
     }
 }
