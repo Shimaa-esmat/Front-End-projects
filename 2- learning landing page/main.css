@@ -138,7 +138,8 @@ body {
     font-size: 24px;
     font-weight: 800;
     line-height: 23px;
-    margin: 16px 16px;
+    margin: 16px ;
+    /* margin: 0; */
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -154,7 +155,10 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
-
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 .course-logo {
     position: relative;
@@ -217,7 +221,7 @@ body {
     .main-section {
         height: 50vh;
         width: 100%;
-        margin-top: 5rem;
+        /* margin-top: 5rem; */
         /* margin-bottom: 5rem; */
     }
     .heading {
@@ -231,8 +235,8 @@ body {
     }
 
     .intro-course {
-        margin: 0 10px 10px 0;
-        padding: 56px 32px;
+        /* margin: 0 10px 10px 0; */
+        /* padding: 56px 32px; */
     }
     .courses {
         width: 100%;
@@ -246,11 +250,14 @@ body {
     .intro-course,
     .course {
         padding: 56px 32px;
-
+        margin: 0;
         width: 100%;
         height: 100%;
 
         /* margin-top: 100px; */
+    }
+    .intro-course {
+        line-height: 40px;
     }
     .footer {
         padding: 0 5%;
@@ -298,7 +305,7 @@ body {
     }
 }  */
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .img {    
         height: 80vh;
         background-image: url(./assets/image-hero-desktop.png);
@@ -313,7 +320,7 @@ body {
     }
     .courses {
         width: 95%;
-        height: 700px;
+        height: 600px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(2, 44%);
         gap: 56px 30px;
@@ -327,14 +334,21 @@ body {
     .intro-course {
         font-size: 29px;
         margin-top: 20px;
+        margin: 0;
+        width: 100%;  
     }
 
-    .intro-course,
     .course {
+        
+        margin: 0;
         width: 100%;  
+        padding-bottom: 60px;
     }
 
     .footer, .main {
         margin: auto;
+        width: 80%;
+        max-width: 1140px;
+
     }
 }
