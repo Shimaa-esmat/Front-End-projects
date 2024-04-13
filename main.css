@@ -120,12 +120,12 @@
         color: var(--Dark-blue);
     }
 
-@media (min-width:375px) and (max-device-width: 1440px) {
+@media (min-width:375px) and (max-device-width: 640px) {
     body {
         background-image: url(./assets/images/pattern-background-mobile.svg);
     }
     .main {
-        margin-top: 30%;
-        width: 380px;
+        margin: 15% 0;
+        width: 365px;
     }
 }
