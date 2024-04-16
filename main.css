@@ -1,5 +1,4 @@
 @import url("https://fonts.google.com/specimen/Red+Hat+Display");
-
 :root {
     --Pale-blue: hsl(225, 100%, 94%);
     --Bright-blue: hsl(245, 75%, 52%);
@@ -10,9 +9,9 @@
 
 * {
     font-family: "Red Hat Display", sans-serif;
-    font-weight: 900;
     box-sizing: border-box;
     border-radius: 15px;
+
 
     margin: 0;
     border: 0;
@@ -20,89 +19,105 @@
 }
 
     body {
-        /* width: 1440px; */
         height: 100vh;
-        display: flex;
+        background-position-y:-90px ;
         background-image: url(./assets/images/pattern-background-desktop.svg);
         background-color: var(--Pale-blue);
-        background-position: 50% 0%;
         background-repeat: no-repeat;
+        background-size:contain;
+        background-attachment:fixed;
+        display: flex;
         justify-content: center;
-        align-content: center;
+        align-items: center;
     }
     .main {
-        /* border-radius: 3%; */
         background-color: var(--Very-pale-blue);
         margin: 10% 0;
-        width:400px;
-        height: 620px;  
+        width:30%;
+        height: 75%;  
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         flex-flow: column wrap;      
         flex-wrap: nowrap;
-        gap: 40px;
         overflow: hidden;
         text-align: center;
         color: var(--Dark-blue);
+        box-shadow: 0px 8px 50px 10px var(--Desaturated-blue)
+
     
-    
-        /* justify-content: space-around; */
-        /* align-content: space-around; */
     }
+
     img {
+        width: 100%;
+        height: 40%;
         border-radius: 0;
     }
     .content {
         display: flex;
+        flex-flow: column wrap;      
         flex-wrap: wrap;
         gap: 15px;
-        /* flex-flow: column wrap;       */
         justify-content: center;
         align-content: center;
         text-align: center;
     }
+
     .p-content {
         font-weight: 500 ;
-        padding: 0 10px;
-        width: 320px;
+        font-size: larger;
+        padding: 0 20px;
+        width: 65%;
         color: var(--Desaturated-blue);
     }
     .main-song {
-        width: 85%;
-        padding: 3% 0%;
-        margin: 0 7%;
-        background-color:hsl(224, 100%, 97%);
+        width: 90%;
+        height: 10%;
+        padding: 0 5% ;
+        background-color:hsl(225, 32%, 85%);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         text-align: center;
         align-content: center;
-    
-        gap: 40px;
-        /* width: 80%; */
+        align-items: center;
+        font-weight: 900 ;
     }
     a {
-        padding: 3% 0;
         color: var(--Bright-blue);
     }
     .song {
-        
         display: flex;
-        gap: 20px;
+    }
+    .price > h3 {
+        margin: 0 0 4% 9%;
+        width: 120px;
     }
     p {
         font-weight: 500;
-        padding:10px 0;
         color: var(--Desaturated-blue);
     }
+    .main-song > a {
+        font-weight: 500;
+        font-size: 130%;
+
+    }
+    .payment > a{
     
-    .payment  a{
-        margin: 0 2%;
-        padding: 4% 23% ;
+        margin: 0 ;
+        font-weight: 900;
+        display: inline-flex;
+        justify-content: center;
+        max-width: 800%;
+        line-height: 1.2;
+        padding: 1.1em 10em;
         color: var(--Very-pale-blue);
         background-color: var(--Bright-blue);
         text-decoration: none;
         box-shadow: 0px 8px 50px 10px rgba(129, 128, 212, 0.5)
     }
-    
+    footer{
+        margin-bottom: 5%;
+    }
     footer a{
         text-decoration: none;
         color: var(--Desaturated-blue);
@@ -113,19 +128,46 @@
         text-decoration: none;
     }
     .payment>a:hover {
+        color: aliceblue;
         background-color: rgb(104, 81, 206); ;
     }
     
-    h4 > a:hover {
+    h3 > a:hover {
         color: var(--Dark-blue);
     }
 
-@media (min-width:375px) and (max-device-width: 640px) {
+@media (min-width:375px) and (max-device-width: 770px) {
+    body {     
+        background-image: url(./assets/images/pattern-background-mobile.svg);
+        background-position-y:0% ;
+
+    }
+
+    
+    .main {
+        /* margin: 15% 0; */
+        font-weight: 500;
+        font-size:small ;
+        width: 89%;
+        height: 80%;
+    }
+    .payment > a{
+        padding: 1.1em 5.8em;
+    }
+
+}
+
+@media (min-width:770px) and (max-device-width: 1200px) {
     body {
         background-image: url(./assets/images/pattern-background-mobile.svg);
+        background-position-y:0% ;
     }
     .main {
-        margin: 15% 0;
-        width: 365px;
+        width:80%;
+        height: 70%;  
+    }
+    .payment > a{
+        border-radius: 50px;
+        padding: 1.1em 15em;
     }
 }
