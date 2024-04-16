@@ -145,13 +145,13 @@ body {
     -o-border-radius: 20px;
 }
 
-.intro-course:hover {
+/* .intro-course:hover {
     background: linear-gradient(0deg,
     rgba(255,255,255,0.5),
     rgba(255,255,255,0.5)),
     linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
     cursor: pointer;
-}
+} */
 
 
 .course {
@@ -244,22 +244,23 @@ body {
         margin: 0 10px 10px 0;
         padding: 56px 32px;
     }
+
+
     .courses {
         width: 100%;
-        height: 800px;
-        margin: auto;
+        height: 750px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 35%);
-        gap: 50px 15px;
+        grid-template-rows: repeat(3, 31%);
+        gap: 50px 10px;
     }
     .intro-course,
     .course {
         margin: 0;
         width: 100%;
         height: 100%;
-
     }
+
     .intro-course {
         line-height: 40px;
     }
@@ -296,8 +297,8 @@ body {
 
     .intro-course {
         font-size: 29px;
-        margin-top: 20px;
         margin: 0;
+        padding: 60px 10px;
         width: 100%;  
     }
 
