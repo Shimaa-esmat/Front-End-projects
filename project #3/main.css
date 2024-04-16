@@ -20,7 +20,7 @@
 
     body {
         height: 100vh;
-        background-position-y:-90px ;
+        /* background-position-y:-90px ; */
         background-image: url(./assets/images/pattern-background-desktop.svg);
         background-color: var(--Pale-blue);
         background-repeat: no-repeat;
@@ -33,8 +33,8 @@
     .main {
         background-color: var(--Very-pale-blue);
         margin: 10% 0;
-        width:30%;
-        height: 75%;  
+        width:550px;
+        height: 850px; 
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,7 +43,7 @@
         overflow: hidden;
         text-align: center;
         color: var(--Dark-blue);
-        box-shadow: 0px 8px 50px 10px var(--Desaturated-blue)
+        box-shadow: 0px 5px 20px .5px var(--Desaturated-blue)
 
     
     }
@@ -109,7 +109,7 @@
         justify-content: center;
         max-width: 800%;
         line-height: 1.2;
-        padding: 1.1em 10em;
+        padding: 1.1em 8.5em;
         color: var(--Very-pale-blue);
         background-color: var(--Bright-blue);
         text-decoration: none;
@@ -136,20 +136,23 @@
         color: var(--Dark-blue);
     }
 
-@media (min-width:375px) and (max-device-width: 770px) {
+@media (min-width:375px) and (max-device-width: 700px) {
     body {     
         background-image: url(./assets/images/pattern-background-mobile.svg);
-        background-position-y:0% ;
+        background-position-y:0;
 
     }
 
     
     .main {
-        /* margin: 15% 0; */
         font-weight: 500;
         font-size:small ;
-        width: 89%;
-        height: 80%;
+        width: 350px;
+        height: 700px;
+    }
+    .p-content {
+
+        width:92%;
     }
     .payment > a{
         padding: 1.1em 5.8em;
@@ -157,17 +160,17 @@
 
 }
 
-@media (min-width:770px) and (max-device-width: 1200px) {
+@media (min-width:800px) and (max-device-width: 1200px) {
     body {
         background-image: url(./assets/images/pattern-background-mobile.svg);
         background-position-y:0% ;
     }
     .main {
-        width:80%;
-        height: 70%;  
+        font-weight: bolder;
+        width:800px;
+        height: 1000px;  
     }
     .payment > a{
-        border-radius: 50px;
         padding: 1.1em 15em;
     }
 }
