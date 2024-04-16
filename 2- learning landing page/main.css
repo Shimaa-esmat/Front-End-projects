@@ -20,15 +20,15 @@ body {
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    /* padding: 20px; */
     align-items: center;
     /* color: #13183f; */
 
 }
 .footer{
+    /* width: fit-content; */
     height: 70px;
     background-color: #13183f;
-    margin: 0;
 }
 .header-btn,
 .footer-btn {
@@ -173,7 +173,7 @@ body {
     position: relative;
     width: 20%;
     display: block;
-    top: -45px;
+    top: -50px;
 }
 
 .course-heading {
@@ -313,7 +313,6 @@ body {
 
     }
     .footer {
-        margin: auto;
-        padding: 0 21%;
+        padding: 0 16%;
     }
 }
