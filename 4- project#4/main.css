@@ -257,9 +257,6 @@ footer > *{
         font-weight: 500;
     }
 
-    footer {
-        bottom: 60px;   
-    }
     
 
 }
@@ -290,7 +287,7 @@ footer > *{
         left: 50%;
     }
     .last-sec {
-        padding: 10%;
+        padding:0 10%;
     }
     .article {
         width:58%;
