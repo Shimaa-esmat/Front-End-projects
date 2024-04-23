@@ -10,11 +10,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border-radius: 2%;
-    -webkit-border-radius: 2%;
-    -moz-border-radius: 2%;
-    -ms-border-radius: 2%;
-    -o-border-radius: 2%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     font-size: 16px;
@@ -62,7 +62,7 @@ body {
 }
 
 .icon > * {
-    height: 90%;
+    height: 75px;
     border-radius: 15%;
     padding: 7%;
     width: 30%;
@@ -122,10 +122,10 @@ progress::-webkit-progress-value {
     width: 50%;
     align-items: center;
     position: absolute;
-    padding: 3% 0%;
+    padding: 2% 0%;
     background-color: rgb(255, 255, 255);
     color: var(--Haiti);
-    top: 70vh;
+    top: 73vh;
     justify-content: center;
     gap: 10px;
 
