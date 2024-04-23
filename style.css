@@ -62,10 +62,10 @@ body {
 }
 
 .icon > * {
-    height: 75px;
+    height: 60px;
     border-radius: 15%;
     padding: 7%;
-    width: 30%;
+    width: 60px;
     background-color: var(--Haiti);
     -webkit-border-radius: 15%;
     -moz-border-radius: 15%;
