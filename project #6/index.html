@@ -14,7 +14,7 @@
     <div class="img">
     </div>
     <!-- <div class="container"> -->
-        <form action="" method="get">
+        <form action="completed.html" method="post" class="container">
             <div class="name">
                 <label for="card-name">CARDHOLDER NAME</label>
                 <input type="text" name="cardname" id="card-name" placeholder="e.g Jana Appleseed">
@@ -26,8 +26,8 @@
             <div class="date-cvc">
                 <span class="date">
                     <label for="MM"  >EXP .DATE (MM/YY)</label>
-                    <input type="number" name="MM" id="MM" max="2" min="2" placeholder="MM">
-                    <input type="number" name="YY" id="YY" max="2" min="2" placeholder="YY">
+                    <input type="number" name="MM" id="MM" max="12" min="1" placeholder="MM">
+                    <input type="number" name="YY" id="YY"  min="24" placeholder="YY">
                 </span>
                 <span class="cvc">
                     <label for="cvc">CVC</label>
