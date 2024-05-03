@@ -14,7 +14,7 @@
     <div class="img">
     </div>
     <!-- <div class="container"> -->
-        <form action="" method="get" class="container">
+        <form action="completed.html" method="get" class="container">
             <div class="name">
                 <label for="card-name">CARDHOLDER NAME</label>
                 <input type="text" name="cardname" id="card-name" placeholder="e.g Jana Appleseed">
@@ -27,7 +27,7 @@
                 <span class="date">
                     <label for="MM"  >EXP .DATE (MM/YY)</label>
                     <input type="number" name="MM" id="MM" max="12" min="1" placeholder="MM">
-                    <input type="number" name="YY" id="YY"  min="24" placeholder="YY">
+                    <input type="number" name="YY" id="YY" max="99"  min="24" placeholder="YY">
                 </span>
                 <span class="cvc">
                     <label for="cvc">CVC</label>
@@ -41,12 +41,12 @@
         <img src=".\images\card-logo.svg" alt="" >
         <div class="num-value">0000 0000 0000 0000</div>
         <div class="card-name-date">
-            <span id="name-value">Jana Appleseed</span>
+            <span id="name-value">Name</span>
             <span id="date-value">00/00</span>
         </div>
         </span>
     <span class="card-num-img">
-        <span>000</span>
+        <span id="cvc-value">000</span>
     </span>
     <!-- Script file -->
     <script src="main.js"></script>
