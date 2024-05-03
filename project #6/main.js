@@ -24,8 +24,6 @@ UserInfo.forEach(e =>{
     }
 
 });
-
-
 let btn = UserInfo.item(5)
 
 btn.addEventListener("click",function(){
