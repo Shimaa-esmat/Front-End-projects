@@ -134,7 +134,11 @@ userInfo.forEach(e =>{
         if(e.id === "MM" ){
             month = e.value
             window.sessionStorage.setItem("month",month)
-            validateNumberField(monthNumberInput,month,null,1,12);            
+            validateNumberField(monthNumberInput,month,null,1,12);  
+            if (+month < 10) {
+                month = "0" + month;
+            }          
+            date.innerHTML = `${month}/${year}`;
 
         }
         if(e.id === "card-num" ){
@@ -147,6 +151,8 @@ userInfo.forEach(e =>{
             year=e.value;
             window.sessionStorage.setItem("year",year)
             validateNumberField(yearNumberInput,year,null,24,99);
+            date.innerHTML = `${month}/${year}`;
+
         }
         
         if(e.id === "cvc" ){
@@ -157,19 +163,9 @@ userInfo.forEach(e =>{
 
         }       
     }
-
-
-
-    // let isNameValid = validateStringField(nameInput,userName);
-    // let iscardNunmberValid = validateNumberField(cardNumberInput,cardNumber,16,null,null);
-    // let isCvcNumberValid = validateNumberField(cvcNumberInput,cvc,null,100,1000);
-    // let isMonthNumberValid = validateNumberField(monthNumberInput,month,null,1,12);
-    // let isYearNumberValid = validateNumberField(yearNumberInput,year,null,24,99);
 });
-if (+month < 10) {
-    month = "0" + month;
-}
-date.innerHTML = `${month}/${year}`;
+
+// date.innerHTML = `${month}/${year}`;
 
 // submitting form
 
