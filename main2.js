@@ -2,7 +2,7 @@
 
 // console.log(userName);
 // get localStorage value
-let cardNumber = window.sessionStorage.getItem("cardNum");
+let cardNumber = window.sessionStorage.getItem("cardNumber");
 let userName = window.sessionStorage.getItem("userName");
 let month = window.sessionStorage.getItem("month");
 let year = window.sessionStorage.getItem("year");
@@ -19,9 +19,11 @@ let cardName = document.querySelector('#name-value');
 let date = document.querySelector('#date-value');
 let cvcValue = document.querySelector('#cvc-value');
 
-cardNumber.textContent = cardNumber;
+cardValue.textContent = cardNumber;
 cardName.innerHTML = userName;
 cvcValue.innerHTML = cvc;
 date.innerHTML = `${month}/${year}`;
+
+sessionStorage.clear();
 
 
