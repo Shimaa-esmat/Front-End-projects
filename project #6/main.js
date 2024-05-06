@@ -14,7 +14,7 @@ let cvcValue = document.querySelector('#cvc-value');
 
  let userName = "";
  let cardNumber = "";
- let month = "0";
+ let month = "00";
  let year = "00";
  let cvc = "";
 
@@ -29,39 +29,10 @@ let cvcValue = document.querySelector('#cvc-value');
 
 
     
-    // get input value
-userInfo.forEach(e =>{
-    e.oninput = function (){
-        if(e.id === "card-name" ){
-            userName = e.value
-            window.sessionStorage.setItem("userName",userName)
-            cardName.innerHTML = userName;
-        }
-        if(e.id === "MM" ){
-            month = e.value
-        }
-        if(e.id === "card-num" ){
-            cardNumber = e.value
-            cardValue.textContent = cardNumber;
-        }
-        if(e.id === "YY" ){
-            year=e.value
-        }
-        
-        if(e.id === "cvc" ){
-            cvc = e.value;
-            cvcValue.innerHTML = cvc;
-
-        }        
-    }
-});
 
 
 
 
-
-
-// export{userName , cardNumber, cvc, month, year};/
 
 
 
@@ -109,6 +80,8 @@ function validateNumberField(inputField,inputFieldData,digit,min,max){
         error(inputField,`Number must be ${digit} digit.`);
         console.log(inputFieldData.length);
         inputField.setAttribute("maxlength", digit);
+        inputField.setAttribute("minlength", digit);
+
         return false;
     }
     if((max !== null) && (+inputFieldData < min || +inputFieldData > max )){
@@ -130,8 +103,6 @@ function validateNumberField(inputField,inputFieldData,digit,min,max){
 
 
 userInfo.forEach(e =>{
-        
-  
     e.oninput = function (){
         if(e.id === "card-name" ){
             userName = e.value
@@ -143,10 +114,7 @@ userInfo.forEach(e =>{
         if(e.id === "MM" ){
             month = e.value
             window.sessionStorage.setItem("month",month)
-            validateNumberField(monthNumberInput,month,2,1,12);  
-            if (+month < 10) {
-                month = "0" + month;
-            }          
+            validateNumberField(monthNumberInput,month,2,1,12);            
             date.innerHTML = `${month}/${year}`;
 
 

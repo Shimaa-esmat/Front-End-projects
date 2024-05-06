@@ -10,9 +10,6 @@ let cvc = window.sessionStorage.getItem("cvc");
 
 
 
-if (+month < 10) {
-    month = "0" + month;
-}
 // get innerText of data
 let cardValue = document.querySelector('.num-value');
 let cardName = document.querySelector('#name-value');
