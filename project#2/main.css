@@ -10,6 +10,11 @@
     margin: 0;
     border: 0;
     padding: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
 }
 
 body {
@@ -32,6 +37,7 @@ body {
 }
 .header-btn,
 .footer-btn {
+    /* transition: .5s; */
     text-decoration: none;
     color: #ffffff;
     height: 48px;
@@ -63,6 +69,7 @@ body {
     background-color: #666ca3;
 }
 .footer-btn:hover {
+
     background: linear-gradient(0deg ,
     rgba(255,255,255,0.5),
     rgba(255,255,255,0.5)),linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
@@ -86,6 +93,7 @@ body {
 }
 
 .text-btn {
+    transition: .5s;
     display: inline-block;
     background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
     color: white;
