@@ -101,8 +101,14 @@ function validateNumberField(inputField,inputFieldData,digit,min,max){
         error(inputField,'Wrong format, number only');
         return false;
     }
-    if((digit !== null) && (+inputFieldData <= Math.pow(10,digit-1) || +inputFieldData >= Math.pow(10,digit))){
+    // if( (+inputFieldData <= Math.pow(10,digit-1) || +inputFieldData >= Math.pow(10,digit))){
+    //     error(inputField,`Number must be ${digit} digit.`);
+    //     return false;
+    // }
+    if( (inputFieldData.split(" ").join("").length > digit-1)){
         error(inputField,`Number must be ${digit} digit.`);
+        console.log(inputFieldData.length);
+        inputField.setAttribute("disabled", "");
         return false;
     }
     if((max !== null) && (+inputFieldData < min || +inputFieldData > max )){
@@ -110,10 +116,16 @@ function validateNumberField(inputField,inputFieldData,digit,min,max){
         console.log("error")
         return false;
     }
+    // if (inputFieldData.length > digit){
+    //     inputField.setAttribute("disabled", "");
+    //     console.log(inputField)
+    //     return false;
+    // }
     
     success(inputField);
     return true;
 }
+
 
 
 
@@ -129,16 +141,18 @@ userInfo.forEach(e =>{
             userName = e.value
             window.sessionStorage.setItem("userName",userName)
             cardName.innerHTML = userName;
+            console.log(userName.length)
             validateStringField(nameInput,userName);
         }
         if(e.id === "MM" ){
             month = e.value
             window.sessionStorage.setItem("month",month)
-            validateNumberField(monthNumberInput,month,null,1,12);  
+            validateNumberField(monthNumberInput,month,2,1,12);  
             if (+month < 10) {
                 month = "0" + month;
             }          
             date.innerHTML = `${month}/${year}`;
+
 
         }
         if(e.id === "card-num" ){
@@ -146,11 +160,13 @@ userInfo.forEach(e =>{
             window.sessionStorage.setItem("cardNumber",cardNumber)
             cardValue.textContent = cardNumber;
             validateNumberField(cardNumberInput,cardNumber,16,null,null)
+            console.log(cardNumber.length)
+
         }
         if(e.id === "YY" ){
             year=e.value;
             window.sessionStorage.setItem("year",year)
-            validateNumberField(yearNumberInput,year,null,24,99);
+            validateNumberField(yearNumberInput,year,2,24,99);
             date.innerHTML = `${month}/${year}`;
 
         }
@@ -159,7 +175,7 @@ userInfo.forEach(e =>{
             cvc = e.value;
             window.sessionStorage.setItem("cvc",cvc)
             cvcValue.innerHTML = cvc;
-            validateNumberField(cvcNumberInput,cvc,null,100,1000);
+            validateNumberField(cvcNumberInput,cvc,3,100,1000);
 
         }       
     }
@@ -176,9 +192,9 @@ form.addEventListener("submit",function(e){
     
     let isNameValid = validateStringField(nameInput,userName);
     let iscardNunmberValid = validateNumberField(cardNumberInput,cardNumber,16,null,null);
-    let isCvcNumberValid = validateNumberField(cvcNumberInput,cvc,null,100,1000);
-    let isMonthNumberValid = validateNumberField(monthNumberInput,month,null,1,12);
-    let isYearNumberValid = validateNumberField(yearNumberInput,year,null,24,99);
+    let isCvcNumberValid = validateNumberField(cvcNumberInput,cvc,3,100,1000);
+    let isMonthNumberValid = validateNumberField(monthNumberInput,month,2,1,12);
+    let isYearNumberValid = validateNumberField(yearNumberInput,year,2,24,99);
     
     if(!(isNameValid&&iscardNunmberValid&&isCvcNumberValid&&isMonthNumberValid&&isYearNumberValid)){
         e.preventDefault();
