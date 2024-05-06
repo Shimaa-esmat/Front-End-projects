@@ -119,8 +119,8 @@ input::placeholder {
     position: absolute;
     top: 157px;
     left: 15px;
-    height: 185px;
-    width: 300px;
+    height: 160px;
+    width: 250px;
     color: #ffff;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -133,8 +133,8 @@ input::placeholder {
     background: url('./images/bg-card-back.png') no-repeat center center/cover;
     top: 50px;
     right: 25px;
-    height: 185px;
-    width: 300px;
+    height: 160px;
+    width: 250px;
     border-radius:8px;
     -webkit-border-radius:8px;
     -moz-border-radius:8px;
@@ -150,7 +150,7 @@ input::placeholder {
     color: #ffffffbb;
     margin: 40px 0 15px 0;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 }
 .card-name-date {
     display: flex;

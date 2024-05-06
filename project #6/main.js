@@ -72,18 +72,20 @@ function validateNumberField(inputField,inputFieldData,digit,min,max){
         error(inputField,'Wrong format, number only');
         return false;
     }
-    // if( (+inputFieldData <= Math.pow(10,digit-1) || +inputFieldData >= Math.pow(10,digit))){
-    //     error(inputField,`Number must be ${digit} digit.`);
-    //     return false;
-    // }
-    if( (inputFieldData.split(" ").join("").length > digit)){
-        error(inputField,`Number must be ${digit} digit.`);
-        console.log(inputFieldData.length);
+    if( (inputFieldData.split(" ").join("").length > digit || inputFieldData.split(" ").join("").length < digit)){
         inputField.setAttribute("maxlength", digit);
         inputField.setAttribute("minlength", digit);
-
+        error(inputField,`Number must be ${digit} digit.`);
+        console.log(inputFieldData.length);
         return false;
     }
+    // if( (inputFieldData.split(" ").join("").length > digit)){
+    //     inputField.setAttribute("maxlength", digit);
+    //     inputField.setAttribute("minlength", digit);
+    //     error(inputField,`Number must be ${digit} digit.`);
+    //     console.log(inputFieldData.length);
+    //     return false;
+    
     if((max !== null) && (+inputFieldData < min || +inputFieldData > max )){
         error(inputField,`Number must be larger than ${min} and smaller than ${max}.`);
         console.log("error")
@@ -124,7 +126,6 @@ userInfo.forEach(e =>{
             window.sessionStorage.setItem("cardNumber",cardNumber)
             cardValue.textContent = cardNumber;
             validateNumberField(cardNumberInput,cardNumber,16,null,null)
-            console.log(cardNumber.length.split(" ").join(""));
 
         }
         if(e.id === "YY" ){
