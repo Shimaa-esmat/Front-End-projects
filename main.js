@@ -105,10 +105,10 @@ function validateNumberField(inputField,inputFieldData,digit,min,max){
     //     error(inputField,`Number must be ${digit} digit.`);
     //     return false;
     // }
-    if( (inputFieldData.split(" ").join("").length > digit-1)){
+    if( (inputFieldData.split(" ").join("").length > digit)){
         error(inputField,`Number must be ${digit} digit.`);
         console.log(inputFieldData.length);
-        inputField.setAttribute("disabled", "");
+        inputField.setAttribute("maxlength", digit);
         return false;
     }
     if((max !== null) && (+inputFieldData < min || +inputFieldData > max )){
@@ -116,11 +116,7 @@ function validateNumberField(inputField,inputFieldData,digit,min,max){
         console.log("error")
         return false;
     }
-    // if (inputFieldData.length > digit){
-    //     inputField.setAttribute("disabled", "");
-    //     console.log(inputField)
-    //     return false;
-    // }
+
     
     success(inputField);
     return true;
@@ -160,7 +156,7 @@ userInfo.forEach(e =>{
             window.sessionStorage.setItem("cardNumber",cardNumber)
             cardValue.textContent = cardNumber;
             validateNumberField(cardNumberInput,cardNumber,16,null,null)
-            console.log(cardNumber.length)
+            console.log(cardNumber.length.split(" ").join(""));
 
         }
         if(e.id === "YY" ){
