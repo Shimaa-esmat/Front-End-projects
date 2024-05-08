@@ -29,6 +29,7 @@ body {
     background: url('./assets/home/background-home-desktop.jpg') no-repeat center center /cover;
     display: flex;
     flex-flow: column;
+    /* gap: 100px; */
     justify-content: space-between;  
 }
 
@@ -44,9 +45,12 @@ body {
     height: 96px;
     justify-content: space-between;
     align-items: center;
-    margin: 2% 0 2% 4%;
+    margin: 2% 0 0% 5%;
 }
-.nav {
+.inner-side-bar{
+    display: none;
+}
+.nav-bar {
     font-size: 22px;
     display: flex;
     height: 96px;
@@ -58,7 +62,7 @@ body {
     background-position: left;
 
 }
-.nav span {
+.nav-bar span {
     font-weight: 500;
     margin-right: 10px;
 }
@@ -92,40 +96,46 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10%;
+
 }
 
 .article{
-    margin: 10%;
     width: 450px;
     height: 382px;
     color: var(--white);
     font-weight: 100;
-    font-size: 20px;
     word-spacing: 4.75px;
+}
+.article span {
+    font-size: 15px;
+    font-family: "Assistant", sans-serif;
+    line-height: 25px;
 }
 
 .article p {
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .article div {
+    font-size: 20px;
+    margin: 15px 0;
     font-family: "Bellefair", serif;
     font-size: 150px;
 }
 
 
 .aside {
-    font-weight: 200;
+    font-weight: 400;
     font-family: "Barlow Condensed", sans-serif;
     font-size: 40px;
-    height: 200px;
-    width: 200px;
+    height: 274px;
+    width: 274px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--white) ;
-    margin-right: 10%;
     text-align: center;
     align-items: center;
     border-radius: 50%;
@@ -155,5 +165,32 @@ a {
 
 
 
+@media (max-width:1050px) {
+    body{
+        background: url('./assets/home/background-home-tablet.jpg') no-repeat center center /cover;
+        gap: 0px;
+        /* justify-content: sp; */
+    }
+    .logo::after{
+    display: none;
+    }
+    .nav-bar span {
+        display: none;
+    }
+    .nav-bar {
+        gap: 20px;
+    }
+    .content{
+        height: 90%;
+        flex-flow: column;
+        justify-content: space-around;
+    }
+    .article{
+        width: 450px;
+        height: 334px;
+        text-align: center;
+    }
+
+}
 
 
