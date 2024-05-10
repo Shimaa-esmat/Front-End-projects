@@ -1,0 +1,7 @@
+body {
+    height: 100vh;
+    background: url('./assets/technology/background-technology-desktop.jpg') no-repeat center center /cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;  
+}
