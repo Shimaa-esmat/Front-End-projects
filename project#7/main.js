@@ -21,29 +21,8 @@ sideBar.addEventListener('click',function(){
 
 
 
-//  console.log(window.location);
-// pageLinks.forEach(el => {
-//     // console.log(el.innerText)
-//     window.onblur = function (e) {
-//         console.log(e.target)
-//     }
-//     window.onfocus = function (e) {
-//         console.log(e.target)
-//     };
-    
+ console.log(pageLinks[0].textContent.toLowerCase().includes('home'));
 
-//     });
-    // el.click();
-    // if(el.act)
-
-
-
- // If users come back to the current tab again, the below function will invoke
-
-if(sideBar.style.display = "none"){
-    // pageLinks.item(2).onclick
-    // console.log("none")
-}
 
 // fetch json file
 let destinations = new Array();
@@ -52,11 +31,15 @@ function getData(key){
     return fetch('./assets/data.json')
     .then(response => response.json())
     .then( data => { 
-        // console.log(data["destinations"][0].name)
-        value = data[key]; // Return the value associated with the key
+        value = data[key]; 
     })
 }
-// destination data
+
+
+
+
+
+//// destination data
 let moons = document.querySelectorAll(".moon");
 let moonName = document.querySelector('.moon-name')
 let moonImage = document.querySelector('.first-section > img');
@@ -64,20 +47,16 @@ let moonDescription = document.querySelector('.article > p');
 let distanceValue = document.querySelector('.dis-value');
 let travelTime = document.querySelector('.time-value');
 
-
-console.log(travelTime)
-
-
 getData("destinations").then(() => {
     value.forEach(e => {
         moons.forEach(el =>{
-            console.log(el)
+            // console.log(el)
             el.addEventListener('click',function(){
                 moons.forEach(ele =>{
-                ele.classList.remove('active');
+                ele.classList.remove('active-moon');
                 })
-                console.log(el)
-                el.classList.add('active')
+                // console.log(el)
+                el.classList.add('active-moon')
                 if(el.textContent.toLowerCase() == e.name.toLowerCase()){
                     moonName.innerHTML = e.name.toUpperCase();
                     moonImage.setAttribute('src',e.images.png);
@@ -95,17 +74,42 @@ getData("destinations").then(() => {
 });
 
 
+//// crew data
+let crews = document.querySelectorAll(".crew");
+let crewName = document.querySelector('.crew-name')
+let crewImage = document.querySelector('.crew-photo > img');
+let bio = document.querySelector('.bio');
+let crewJob = document.querySelector('.job');
 
 
 
+getData("crew").then(() => {
+    value.forEach(e => {
+        crews.forEach(el =>{
+            console.log(e.name)
+            el.addEventListener('click',function(){
+                // console.log(el.parentElement.parentElement.firstElementChild.firstElementChild)
+                console.log(el.id);
+                crews.forEach(ele =>{
+                ele.classList.remove('active-crew');
+                })
+                el.classList.add('active-crew')
+                if(el.id.toLowerCase() == e.name.toLowerCase()){
+                    console.log("fff");
+                    crewName.innerHTML = e.name.toUpperCase();
+                    crewImage.setAttribute('src',e.images.png);
+                    crewJob.innerHTML = e.role
+                    bio.innerHTML = e.bio
+
+                }
+            
+            
+        })
+    })
+})    
+
+});
 
 
-
-// moons.forEach(el =>{
-//     el.addEventListener('click',function(e){
-        
-//         console.log(el);
-//     })
-// })
 
 

@@ -31,7 +31,7 @@ body {
     justify-content: center;
     gap: 100px;
 
-    /* padding: 0 50px 0 100px; */
+    padding: 0 100px 0 0px;
 
 }
 
@@ -53,7 +53,7 @@ body {
 .first-section img {
     width: 445px;
     height: 445px;
-    margin:0 0 100px 250px;
+    margin:0 0 100px 100px;
 }
 
 .first-section p {
@@ -64,7 +64,7 @@ body {
     word-spacing: 5px;
     letter-spacing: 4px;
     align-self: flex-start;
-    margin: 0 0 100px 180px ;
+    margin: 0 0 80px 80px ;
 }
 
 .first-section span {
@@ -92,14 +92,14 @@ body {
     z-index: -5;
     background: var(--whit-gray);
 }
-.active::after {
+.active-moon::after {
     content: "";
     display: block;
     height: 3px;
     width: 100%;
     position: relative;
     top: 0px;
-    left:0%;
+    left: -2px;
     z-index: -5;
     background: var(--gray);
 }
@@ -155,13 +155,17 @@ body {
 @media (max-width:1100px) {
     body {
         background: url('./assets/destination/background-destination-tablet.jpg') no-repeat center center /cover;
-
+        gap: 30px;
     }
 
     .content {
+        padding: 0;
         gap: 0;
         justify-content: center;
         align-items: center;
+    }
+    .first-section{
+        gap:50px;
     }
     .first-section , .sec-section {
         margin: 0;
@@ -179,6 +183,8 @@ body {
         align-self: flex-start;
     }
     .first-section img {
+        width: 400px;
+        height: 400px;
         margin: 0;
     }
     .sec-section {
@@ -188,17 +194,18 @@ body {
         }
         .moons{
             gap: 40px;
-            font-size: 35px;
+            font-size: 30px;
             letter-spacing: 5px;
 
         }
         
         .moon-name {
-            font-size: 120px;            
+            font-size: 100px;            
         }
         .article p {
             font-weight: 100;
             font-size: 25px;
+            margin-bottom: 20px;
         }
 }
 
@@ -226,7 +233,7 @@ body {
         text-align: center;
         width: 100%;
         padding: 0;
-        font-size:15px ;
+        font-size:25px ;
         margin: 0;
     }
 
@@ -236,7 +243,7 @@ body {
         }
         .moons{
             gap: 10px;
-            font-size: 15px;
+            font-size: 20px;
             letter-spacing: 5px;
 
         }
