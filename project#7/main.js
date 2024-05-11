@@ -74,7 +74,7 @@ getData("destinations").then(() => {
 });
 
 
-//// crew data
+// crew data
 let crews = document.querySelectorAll(".crew");
 let crewName = document.querySelector('.crew-name')
 let crewImage = document.querySelector('.crew-photo > img');
@@ -113,3 +113,38 @@ getData("crew").then(() => {
 
 
 
+// tech data
+
+let technology = document.querySelectorAll(".tech");
+let tschnologyName = document.querySelector('.tech-term')
+let technologyImageLandscape = document.querySelector('.landscape');
+let technologyImagePortrait = document.querySelector('.portrait');
+let description = document.querySelector('.description');
+
+
+
+getData("technology").then(() => {
+    value.forEach(e => {
+        technology.forEach(el =>{
+            console.log(e.name)
+            el.addEventListener('click',function(){
+                console.log(el.id);
+                technology.forEach(ele =>{
+                ele.classList.remove('active-tech');
+                })
+                el.classList.add('active-tech')
+                if(el.id.toLowerCase() == e.name.toLowerCase()){
+                    console.log("fff");
+                    tschnologyName.innerHTML = e.name.toUpperCase();
+                    technologyImagePortrait.setAttribute('src',e.images.portrait);
+                    technologyImageLandscape.setAttribute('src',e.images.landscape);
+                    description.innerHTML = e.description
+
+                }
+            
+            
+        })
+    })
+})    
+
+});

@@ -150,7 +150,7 @@ a {
 }
 .inner-side-bar{
     z-index:5;
-    display: flex;
+    display: none;
     gap: 40px;
     flex-flow: column;
     align-items: start;
