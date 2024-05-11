@@ -11,17 +11,16 @@ body {
 }
 .container {
     height: 100%;
-    padding: 0 11%;
+    padding: 0 15%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .article {
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    /* justify-content:space-between; */
-    gap: 100px;
+    justify-content:space-between;
     align-self: flex-end;
     padding: 100px 0;
 }
@@ -45,8 +44,9 @@ body {
 .details {
     display: flex;
     flex-direction: column;
-    height: 300px;
-    justify-content: space-between;
+    height: 350px;
+    gap: 30px;
+    /* justify-content: space-between; */
     font-family: "Bellefair", serif;
 
 }
@@ -57,12 +57,12 @@ body {
 }
 .name {
     font-family: "Bellefair", serif;
-    font-size: 55px;
-    width: 532px;
+    font-size: 50px;
+    width: 600px;
 }
 
 .bio {
-    width: 500px;
+    width: 600px;
     font-weight: 300;
     font-size: 18px;
     font-family: "Assistant", sans-serif;
