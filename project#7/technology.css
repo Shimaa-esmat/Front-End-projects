@@ -57,6 +57,7 @@ body {
 
 }
 .tech {
+    cursor: pointer;
     font-family: "Barlow Condensed", sans-serif;
     font-size: 25px;
     display: flex;
