@@ -127,6 +127,9 @@ a {
 
 
 @media (max-width:590px){
+    body {
+        height: 110vh;
+    }
 
     .nav-bar{
         display: none;

@@ -114,7 +114,6 @@ body {
 
 @media (max-width:1200px) {
     body {
-        overflow: hidden;
         background: url('./assets/crew/background-crew-tablet.jpg') no-repeat center center /cover;
     }    
     .container {
@@ -230,6 +229,31 @@ body {
         z-index: -5;
         background: gray;
     } 
+    .crew {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255,255,255, 0.1);
+        backdrop-filter: blur(40px);
+
+    
+    } 
+    .crew:hover ,.active-crew{
+        width:15px;
+        height: 15px;
+
+    
+    }
+
+    @keyframes switch {
+        from{
+            width: 10px;
+            height: 10px;
+        }
+        to {
+            width: 15px;
+            width: 15px;
+        }
+    }
 
 }
 

@@ -109,7 +109,6 @@ p {
 @media (max-width:1100px) {
     body {
 
-        overflow: hidden;
         background: url('./assets/technology/background-technology-tablet.jpg') no-repeat center center /cover;
     }
     .head-line {
@@ -149,14 +148,12 @@ p {
 
 @media (max-width:550px) {
     body {
-
+        
         background-image: url('./assets/technology/background-technology-mobile.jpg');
-        overflow: hidden;
         gap: 20px;
 
     }
     .container {
-        height: 70%;
         flex-direction: column-reverse;
         justify-content: center;
         gap: 25px;
@@ -170,8 +167,7 @@ p {
     .details {
         margin: 0;
         justify-content: space-between;
-        /* height: 355px; */
-        /* gap: 15px; */
+
     }
     .head-line {
         font-size: 20px;
@@ -184,7 +180,6 @@ p {
     }
     .description {
         margin: 0;
-        /* padding: 10px; */
         width:95%;
     }
     .tech {

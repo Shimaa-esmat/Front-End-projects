@@ -95,11 +95,11 @@ body {
 .active-moon::after {
     content: "";
     display: block;
-    height: 3px;
+    height: 1px;
     width: 100%;
     position: relative;
-    top: 0px;
-    left: -2px;
+    top: 3px;
+    left: -1px;
     z-index: -5;
     background: var(--gray);
 }
@@ -203,6 +203,7 @@ body {
             font-size: 100px;            
         }
         .article p {
+            height: 176px;
             font-weight: 100;
             font-size: 25px;
             margin-bottom: 20px;
