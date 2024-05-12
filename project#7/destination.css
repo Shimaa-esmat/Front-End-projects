@@ -18,7 +18,7 @@
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
     background: url('./assets/destination/background-destination-desktop.jpg') no-repeat center center /cover;
     display: flex;
     flex-flow: column;
@@ -87,15 +87,15 @@ body {
     height: 3px;
     width: 100%;
     position: relative;
-    top: 0px;
-    left:0%;
+    top: 3px;
+    left: -1px;
     z-index: -5;
     background: var(--whit-gray);
 }
 .active-moon::after {
     content: "";
     display: block;
-    height: 1px;
+    height: 3px;
     width: 100%;
     position: relative;
     top: 3px;
@@ -154,7 +154,7 @@ body {
 
 @media (max-width:1100px) {
     body {
-        height: 110vh;
+        height: 115vh;
         background: url('./assets/destination/background-destination-tablet.jpg') no-repeat center center /cover;
         gap: 30px;
     }
@@ -269,6 +269,15 @@ body {
         .time-value ,.dis-value {
             font-size: 35px;
             font-weight: 100;
+        }
+        .moon:hover::after {
+
+            height: 1px;
+
+        }
+        .active-moon::after {
+            height: 1px;
+
         }
     
 }
