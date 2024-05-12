@@ -211,20 +211,19 @@ body {
 
 @media (max-width:590px) {
     body {
-
-        gap: 0;
+        gap: 25px;
         background: url('./assets/destination/background-destination-mobile.jpg') no-repeat center center /cover;
         
     }
     .content{
-        gap: 10px;
+        gap: 30px;
     }
     .first-section img {
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
     }
     .first-section, .sec-section{
-        gap: 10px;
+        gap: 20px;
         width: 100%;
         height: fit-content;
     }
@@ -233,28 +232,27 @@ body {
         text-align: center;
         width: 100%;
         padding: 0;
-        font-size:25px ;
+        font-size:20px ;
         margin: 0;
     }
 
     .sec-section {
         width: 90%;
-        gap: 5px;
         }
         .moons{
             gap: 10px;
-            font-size: 20px;
-            letter-spacing: 5px;
+            font-size: 18px;
+            letter-spacing: 3px;
 
         }
         
         .moon-name {
-            font-size: 55px;            
+            font-size: 35px;            
         }
         .article p {
             line-height: 30px;
             font-weight: 100;
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 25px;
         }
         .dis-time {
@@ -267,7 +265,7 @@ body {
             gap: 10px;
         }
         .time-value ,.dis-value {
-            font-size: 40px;
+            font-size: 35px;
             font-weight: 100;
         }
     

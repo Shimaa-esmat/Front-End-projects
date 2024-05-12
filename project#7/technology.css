@@ -98,7 +98,7 @@ p {
     font-family: "Assistant", sans-serif;
     line-height: 35px;
     margin-bottom: 50px;
-}
+} 
 
 .tech:hover , .active-tech{
     background-color: #ffffff;
@@ -152,46 +152,54 @@ p {
 
         background-image: url('./assets/technology/background-technology-mobile.jpg');
         overflow: hidden;
-        gap: 10px;
+        gap: 20px;
 
     }
     .container {
-        height: 80%;
+        height: 70%;
         flex-direction: column-reverse;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 25px;
         
     }
     .article {
+
         width: 100%;
-        gap: 15px;
+        gap: 25px;
     }
     .details {
-        gap: 10px;
+        margin: 0;
+        justify-content: space-between;
+        /* height: 355px; */
+        /* gap: 15px; */
     }
     .head-line {
-
-        /* padding: 0; */
-        font-size: 30px;
+        font-size: 20px;
+        align-self: center;
+        padding: 0;
     }
     .landscape {
-        width: 400px;
+        width: 100%;
         height: 170px;
     }
     .description {
         margin: 0;
-        width: 350px;
+        /* padding: 10px; */
+        width:95%;
     }
     .tech {
         width: 50px;
         height: 50px;
     }
+
     p {
         font-weight: 300;
         font-size: 20px;
         font-family: "Assistant", sans-serif;
     }
     .tech-term {
-        font-size: 35px;
+        font-size: 30px;
+        width: 300px;
     }
-    
+
 }

@@ -9,7 +9,7 @@ body {
     flex-flow: column;
     /* justify-content: space-between;   */
 }
-.container {
+ .container {
     height: 100%;
     padding: 0 15%;
     display: flex;
@@ -27,7 +27,6 @@ body {
 .head-line {
     color: #ffffff;
     padding: 100px 0 0 180px;
-    /* width: 500px; */
     height: 34px;
     font-size: 35px;
     font-weight: 300;
@@ -46,7 +45,6 @@ body {
     flex-direction: column;
     height: 350px;
     gap: 30px;
-    /* justify-content: space-between; */
     font-family: "Bellefair", serif;
 
 }
@@ -91,7 +89,7 @@ body {
     animation-name: switch;
     animation-duration: .2s;
 
-}
+} 
 .crew:hover ,.active-crew{
     width:20px;
     height: 20px;
@@ -169,33 +167,39 @@ body {
 @media (max-width: 550px) {
     body {
         background: url('./assets/crew/background-crew-mobile.jpg') no-repeat center center / cover;
+        /* justify-content: space-evenly; */
+        gap: 15px;
     }
     .container{
-        overflow: hidden;
+
+        height: 75%;        padding: 0;
+        width: 100%;
+        /* overflow: hidden; */
         flex-direction: column-reverse;
         justify-content: center;
-        gap: 50px;
+        gap: 20px;
 
     }
     .article{
         align-self: center;
-        gap: 10px;
+        gap: 20px;
         flex-direction: column-reverse;
-        width: 380px;
+        width: 90%;
     }
     .crew-photo img {
-        height: 223px;
-        width: 327px;
+        height:286px;
+        width:300px;
     }
     .head-line {
+        font-size: 20px;
         align-self: center;
-        text-align: center;
         padding: 0;
     }
 
     .details{
+        height:280px ;
         width: 100%;
-        gap: 15px;
+        gap: 20px;
 
     }
     .job{
@@ -203,28 +207,29 @@ body {
         font-weight: 200;
     }
     .crew-name {
+        width: 300px;
         font-weight: 100;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .bio {
-        line-height: 25px;
+        line-height: 30px;
         width: 100%;
-        font-weight: 200;
-        font-size:15px;
+        font-weight: 100;
+        font-size:22px;
 
     }
     .crew-photo::after {
         content:" ";
         display: block;
         height: 1px;
-        width: 110%;
+        width: 350px;
         position: relative;
-        top: 0px;
-        right: 10px;
+        top: -3px;
+        left: 0px;
         z-index: -5;
         background: gray;
-    }
+    } 
 
 }
 
