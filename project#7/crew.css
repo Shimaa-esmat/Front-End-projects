@@ -166,7 +166,7 @@ body {
 @media (max-width: 550px) {
     body {
         background: url('./assets/crew/background-crew-mobile.jpg') no-repeat center center / cover;
-        /* justify-content: space-evenly; */
+        height: 108vh;
         gap: 15px;
     }
     .container{

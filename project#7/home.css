@@ -91,6 +91,7 @@ body {
 
 @media (max-width:590px){
     body {
+        height: 100vh;
         background: url('./assets/home/background-home-mobile.jpg') no-repeat center center/cover;
     }
     .content{

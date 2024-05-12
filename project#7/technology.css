@@ -148,9 +148,9 @@ p {
 
 @media (max-width:550px) {
     body {
-        
+        height: 108vh;
         background-image: url('./assets/technology/background-technology-mobile.jpg');
-        gap: 20px;
+        gap: 0px;
 
     }
     .container {

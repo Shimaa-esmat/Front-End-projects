@@ -154,6 +154,7 @@ body {
 
 @media (max-width:1100px) {
     body {
+        height: 110vh;
         background: url('./assets/destination/background-destination-tablet.jpg') no-repeat center center /cover;
         gap: 30px;
     }
