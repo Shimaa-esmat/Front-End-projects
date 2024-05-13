@@ -47,13 +47,25 @@ let moonDescription = document.querySelector('.article > p');
 let distanceValue = document.querySelector('.dis-value');
 let travelTime = document.querySelector('.time-value');
 
+
+window.onload = function() {
+    moonImage.style.animation = "newmoon 5s forwards";
+};
+
+
+
 getData("destinations").then(() => {
     value.forEach(e => {
         moons.forEach(el =>{
             // console.log(el)
             el.addEventListener('click',function(){
+                                moonImage.style.width = "0px";
+                moonImage.style.height = "0px";
+
+                moonImage.style.animation = "newmoon 0.5s forwards";
                 moons.forEach(ele =>{
                 ele.classList.remove('active-moon');
+                
                 })
                 // console.log(el)
                 el.classList.add('active-moon')
@@ -65,6 +77,11 @@ getData("destinations").then(() => {
                     travelTime.innerHTML = e.travel
 
                 }
+                moonImage.style.width = "0px";
+                moonImage.style.height = "0px";
+
+                moonImage.style.animation = "newmoon 0.5s forwards";
+
             
             
         })

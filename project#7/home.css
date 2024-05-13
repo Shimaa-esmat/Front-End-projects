@@ -1,53 +1,66 @@
-body {
-    height: 100vh;
-    background: url('./assets/home/background-home-desktop.jpg') no-repeat center center /cover;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;  
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=Cairo:wght@200..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=Cairo:wght@200..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    font-family: "Barlow Condensed", sans-serif;
+}
+body{
+    color:#ffffff;
+    background: url('./assets/home/background-home-mobile.jpg') no-repeat center center /cover;
 }
 
-.content {
-    width: 100%;
-    display: flex;
+.container {
+    height: 78%;
+    display:flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10%;
-
+    gap: 60px;
 }
 
-.article{
-    width: 450px;
-    height: 382px;
-    color: var(--white);
+.article {
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60%;
+    width: 90%;
+}
+.aside {
+    display: flex;
+    align-items: center;
+}
+
+
+.head-line {
+
+    padding: 0;
+    word-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: 100;
-    word-spacing: 4.75px;
-}
-.article span {
-    font-size: 15px;
-    font-family: "Assistant", sans-serif;
-    line-height: 25px;
-}
-
-.article p {
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: 24px;
-}
-
-.article div {
     font-size: 20px;
-    margin: 15px 0;
-    font-family: "Bellefair", serif;
-    font-size: 150px;
 }
 
+.name {
+    font-size: 20px;
+    font-family: "Bellefair", serif;
+    font-size: 90px;
+}
+.bio {
+    text-align: center;
+    line-height: 30px;
+    font-weight: 100;
+    font-size: 21px;
+}
 
 .aside {
     color: #ffffff;
-    font-weight: 200;
     font-family: "Bellefair", serif;
-    font-size: 40px;
-    height: 274px;
-    width: 274px;
+    font-weight:200;
+    font-size: 24px;   
+    width: 170px;
+    height: 170px;    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,64 +79,63 @@ body {
 
 .aside:hover{
     box-shadow: 0px 0px 0px 50px  rgba(255, 255, 255, 0.1);
-}
+} 
 
-
-
-@media (max-width:1050px) {
-    body{
-        background: url('./assets/home/background-home-tablet.jpg') no-repeat center center /cover;
-        gap: 0px;
-        /* justify-content: sp; */
-    }
-    .content{
-        height: 90%;
-        flex-flow: column;
-        justify-content: space-around;
-    }
-    .article{
-        width: 450px;
-        height: 334px;
-        text-align: center;
-    }
-
-}
-
-@media (max-width:590px){
+@media (min-width: 600px) {
     body {
-        height: 100vh;
-        background: url('./assets/home/background-home-mobile.jpg') no-repeat center center/cover;
-    }
-    .content{
-        padding-top: 0;
-    }
-    .article{
-        width: 340px;
-        height: 276px;
-    }
-    .aside{
-        width: 150px;
-        height: 150px;
-    }
+        background: url('./assets/home/background-home-tablet.jpg')no-repeat center center  /cover;
 
-    
-    .article p {
-        font-family: "Barlow Condensed", sans-serif;
+    }
+    .article {
+        width: 70%;
+        gap: 10px;
+    }
+    .head-line {
         font-size: 25px;
     }
-    
-    .article div {
-        font-size: 20px;
-        margin: 15px 0;
-        font-family: "Bellefair", serif;
-        font-size: 90px;
+    .name {
+        font-size: 190px;
+    }
+    .bio {
+        font-size: 22px;
+        line-height: 40px;
     }
     .aside {
-        font-weight:200;
-        font-size: 24px;
-
+        font-size: 50px;
+        width: 300px;
+        height: 300px;
     }
 
-
+    @media (min-width:1050px) {
+        body {
+            background: url('./assets/home/background-home-desktop.jpg')no-repeat center center  /cover;
+            justify-content: space-between;
+        }
+        .container {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .article {
+            text-align: end;
+            align-items: start;
+            width: 40%;
+        }
+        .head-line {
+            font-size: 28px;
+        }
+        .name {
+            font-size: 140px;
+        }
+        .bio {
+            text-align: start;
+            font-size: 20px;
+            line-height: 27px;
+            width: 65%;
+        }
+        .aside {
+            font-size: 40px;
+            width: 250px;
+            height: 250px;
+        }
+    }
 }
-

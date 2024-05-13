@@ -3,15 +3,15 @@
 
 }
 body {
-    height: 120vh;
+    /* height: 100vh; */
     background: url('./assets/crew/background-crew-desktop.jpg') no-repeat center center /cover;
     display: flex;
     flex-flow: column;
-    gap:50px ;
+    gap:30px ;
     /* justify-content: space-between;   */
 }
  .container {
-    height: 72%;
+    height: 69%;
     padding: 0 15%;
     display: flex;
     justify-content: space-between;
@@ -25,21 +25,7 @@ body {
     align-self: flex-end;
     padding: 100px 0;
 }
-.head-line {
-    color: #ffffff;
-    padding: 0 0 0 180px;
-    height: 34px;
-    font-size: 35px;
-    font-weight: 300;
-    word-spacing: 5px;
-    letter-spacing: 4px;
-}
 
-.head-line span {
-    padding-right: 15px;
-    font-weight: 800;
-    color: var(--gray);
-}
 
 .details {
     display: flex;
@@ -67,7 +53,7 @@ body {
     font-family: "Assistant", sans-serif;
     line-height: 35px;
     margin-bottom: 50px;
-}
+} 
 
 .switch-crew {
     display: flex;
@@ -98,6 +84,13 @@ body {
 
 }
 
+.crew-photo img{
+    align-content: end;
+
+    align-self: flex-end;
+    width: 420px;
+    height: 500px;
+}
 .crew-photo {
     align-self: flex-end;
 }
@@ -118,6 +111,7 @@ body {
         background: url('./assets/crew/background-crew-tablet.jpg') no-repeat center center /cover;
     }    
     .container {
+        height: 80%;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -128,7 +122,7 @@ body {
         align-self: center;
     }
     .crew-photo img {
-        height: 500px;
+        /* height: 500px; */
     }
     .head-line{
         padding: 0;
@@ -160,6 +154,10 @@ body {
         margin: 0;
 
     }
+    .crew-photo img{
+
+        width: 483px;
+        height: 458px;
 
 
 }
@@ -258,3 +256,4 @@ body {
 
 }
 
+}

@@ -10,21 +10,7 @@ body {
     gap: 50px
 }
 
-.head-line {
-    color: #ffffff;
-    padding-left: 180px;
-    height: 34px;
-    font-size: 35px;
-    font-weight: 300;
-    word-spacing: 5px;
-    letter-spacing: 4px;
-}
 
-.head-line span {
-    padding-right: 15px;
-    font-weight: 800;
-    color: var(--gray);
-}
 
 .landscape {
     display: none;
