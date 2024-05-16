@@ -42,32 +42,22 @@ function getData(key){
 //// destination data
 let moons = document.querySelectorAll(".moon");
 let moonName = document.querySelector('.moon-name')
-let moonImage = document.querySelector('.first-section > img');
-let moonDescription = document.querySelector('.article > p');
+let moonImage = document.querySelector('.moon-photo > img');
+let moonDescription = document.querySelector('.bio');
 let distanceValue = document.querySelector('.dis-value');
 let travelTime = document.querySelector('.time-value');
-
 
 window.onload = function() {
     moonImage.style.animation = "newmoon 5s forwards";
 };
-
-
-
 getData("destinations").then(() => {
     value.forEach(e => {
         moons.forEach(el =>{
-            // console.log(el)
             el.addEventListener('click',function(){
-                                moonImage.style.width = "0px";
-                moonImage.style.height = "0px";
-
-                moonImage.style.animation = "newmoon 0.5s forwards";
                 moons.forEach(ele =>{
                 ele.classList.remove('active-moon');
                 
                 })
-                // console.log(el)
                 el.classList.add('active-moon')
                 if(el.textContent.toLowerCase() == e.name.toLowerCase()){
                     moonName.innerHTML = e.name.toUpperCase();
@@ -75,15 +65,10 @@ getData("destinations").then(() => {
                     moonDescription.innerHTML = e.description
                     distanceValue.innerHTML = e.distance
                     travelTime.innerHTML = e.travel
-
                 }
-                moonImage.style.width = "0px";
-                moonImage.style.height = "0px";
-
-                moonImage.style.animation = "newmoon 0.5s forwards";
-
-            
-            
+                // moonImage.style.width = "0px";
+                // moonImage.style.height = "0px";
+                // moonImage.style.animation = "newmoon 0.5s forwards";
         })
     })
 })    
@@ -133,10 +118,10 @@ getData("crew").then(() => {
 // tech data
 
 let technology = document.querySelectorAll(".tech");
-let tschnologyName = document.querySelector('.tech-term')
+let tschnologyName = document.querySelector('.tech-name')
 let technologyImageLandscape = document.querySelector('.landscape');
 let technologyImagePortrait = document.querySelector('.portrait');
-let description = document.querySelector('.description');
+let description = document.querySelector('.bio');
 
 
 

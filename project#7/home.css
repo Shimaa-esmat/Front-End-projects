@@ -33,7 +33,7 @@ body{
 }
 
 
-.head-line {
+.head-line-home {
 
     padding: 0;
     word-spacing: 3px;
@@ -42,18 +42,11 @@ body{
     font-size: 20px;
 }
 
-.name {
+.home-name {
     font-size: 20px;
     font-family: "Bellefair", serif;
     font-size: 90px;
 }
-.bio {
-    text-align: center;
-    line-height: 30px;
-    font-weight: 100;
-    font-size: 21px;
-}
-
 .aside {
     color: #ffffff;
     font-family: "Bellefair", serif;
@@ -90,10 +83,10 @@ body{
         width: 70%;
         gap: 10px;
     }
-    .head-line {
+    .head-line-home {
         font-size: 25px;
     }
-    .name {
+    .home-name {
         font-size: 190px;
     }
     .bio {
@@ -120,10 +113,10 @@ body{
             align-items: start;
             width: 40%;
         }
-        .head-line {
+        .head-line-home {
             font-size: 28px;
         }
-        .name {
+        .home-name {
             font-size: 140px;
         }
         .bio {

@@ -1,8 +1,7 @@
-*{
+/* *{
     font-family: "Barlow Condensed", sans-serif;
 }
 body {
-    /* height: 100vh; */
     background: url('./assets/technology/background-technology-desktop.jpg') no-repeat center center /cover;
     display: flex;
     flex-flow: column;
@@ -183,4 +182,117 @@ p {
         width: 300px;
     }
 
+} */
+body {
+    height: 100vh;
+    background: url('./assets/technology/background-technology-mobile.jpg') no-repeat center center/cover;
+}
+.portrait {
+    display: none;
+}
+.container {
+    gap: 30px;
+}
+
+.landscape {
+    width: 100%;
+}
+.details {
+    flex-direction: column;
+    gap: 30px;
+}
+.switch-tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.tech {
+    cursor: pointer;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width:50px;
+    height:50px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: .5s;
+    border:0.5px solid gray;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.tech:hover , .active-tech{
+    background-color: #ffffff;
+    color: black;
+}
+@media (min-width:750px) and (min-height:900px){
+    body {
+        background: url('./assets/technology/background-technology-tablet.jpg') no-repeat center center /cover;
+    }
+    .container {
+        gap:65px;
+    }
+    .tech-photo{
+        width: 100%;
+    }
+    .tech-name {
+        font-size: 45px;
+    }
+    .details {
+        gap: 40px;
+        width: 70%;
+    }
+    .bio {
+        margin-top: 10px ;
+        line-height: 40px;
+        font-size: 25px;
+    }
+    .tech {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+@media (min-width:1100px) {
+    body {
+        gap: 20px;
+        background: url('./assets/technology/background-technology-desktop.jpg') no-repeat center center /cover;
+    }
+
+    .details {
+        flex-direction: row;
+        gap: 80px;
+    }
+    .switch-tech{
+        flex-direction: column;
+    }
+    .article {
+        align-items: flex-start;
+        width: 50%;
+    }
+    .bio {
+        text-align: start;
+    }
+    .portrait{
+        display: block;
+        width: 450px;
+        height: 430px;
+    }
+    .landscape {
+        display: none;
+    }
+    .tech{
+        width:80px;
+        height:80px;
+    }
 }

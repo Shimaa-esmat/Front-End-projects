@@ -2,15 +2,13 @@
     font-family: "Barlow Condensed", sans-serif;
 
 }
-body {
-    /* height: 100vh; */
+/* body {
     background: url('./assets/crew/background-crew-desktop.jpg') no-repeat center center /cover;
     display: flex;
     flex-flow: column;
     gap:30px ;
-    /* justify-content: space-between;   */
-}
- .container {
+} */
+ /* .container {
     height: 69%;
     padding: 0 15%;
     display: flex;
@@ -122,7 +120,6 @@ body {
         align-self: center;
     }
     .crew-photo img {
-        /* height: 500px; */
     }
     .head-line{
         padding: 0;
@@ -172,7 +169,6 @@ body {
 
         height: 75%;        padding: 0;
         width: 100%;
-        /* overflow: hidden; */
         flex-direction: column-reverse;
         justify-content: center;
         gap: 20px;
@@ -256,4 +252,201 @@ body {
 
 }
 
+} */
+
+/* .crew-photo img{
+    width: 50px;
+    height: 50px;
+} */
+
+body {
+    height: 105vh;
+    background: url('./assets/crew/background-crew-mobile.jpg') no-repeat center center / cover;
+}
+
+.container{
+    flex-direction: column-reverse;
+    gap: 30px;
+}
+.details {
+    gap: 20px;
+}
+
+
+.switch-crew {
+    display: flex;
+    justify-content: space-between;
+    width: 135px;
+    height: 20px;
+}
+
+.crew {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation-name: switch;
+    animation-duration: .2s;
+
+} 
+.crew:hover ,.active-crew{
+    width:15px;
+    height: 15px;
+    background-color: gray;
+}
+.crew-photo {
+    height:286px;
+    width:300px;
+    align-self: center;
+}
+.crew-photo img {
+    height:286px;
+    width:300px;
+}
+.crew-photo::after {
+    content:" ";
+    display: block;
+    height: 1px;
+    width: 350px;
+    position: relative;
+    top: -1px;
+    left: -22px;
+    z-index: -5;
+    background: gray;
+} 
+.job{
+    font-family: "Bellefair", serif;
+    font-size: 25px;
+    font-weight: 200;
+    font-size: 32px;
+    color: gray;
+}
+
+@keyframes switch {
+    from{
+        width: 10px;
+        width: 10px;
+    }
+    to {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (min-width:750px) and (min-height:900px){
+    body {
+        height: 100vh;
+        overflow: hidden;
+        background: url('./assets/crew/background-crew-tablet.jpg') no-repeat center center / cover;
+    }
+    .container {
+        flex-direction: column;
+        height: 80%;
+        gap: 50px;
+    }
+    .details {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 45px;
+        width: 78%;
+    }
+    .crew-photo {
+        height:500px;
+        width:480px;
+    }
+    .crew-photo img {
+        height:550px;
+        width:480px;
+    }
+    .crew-photo::after{
+        display: none;
+    }
+    .jop, .bio {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .crew-name {
+        font-size: 45px;
+    }
+    .crew {
+        width: 15px;
+        height: 15px;
+    } 
+    .crew:hover ,.active-crew{
+        width:20px;
+        height: 20px;
+    }
+
+}
+@media (min-width:1050px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+        gap: 20px;
+        background: url('./assets/crew/background-crew-desktop.jpg') no-repeat center center /cover;
+    }
+    .crew-photo::after {
+        display: none;
+    }
+    .container {
+        justify-self: end;
+        justify-content: space-evenly;
+        flex-direction: row;
+        height: 75%;
+    }
+    .details {
+        width: 40%;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+        height: 322px;
+
+    }
+    .article {
+        align-items: start;
+    }
+    .crew-name {
+        font-size: 40px;
+    }
+    .job {
+        font-size: 22px;
+    }
+    .bio {
+        font-size: 18px;
+        text-align: start;
+    }
+    .crew-photo{
+        align-self: flex-end;
+        width: 450px;
+        height: 520px;
+    }
+    .crew-photo img {
+        width: 450px;
+        height: 520px;
+    }
+    .crew {
+        width: 15px;
+        height: 15px;
+    } 
+    .crew:hover ,.active-crew{
+        width: 20px;
+        height: 20px;
+    }
+    @keyframes switch {
+        from{
+            width: 15px;
+            width: 15px;
+        }
+        to {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
 }
