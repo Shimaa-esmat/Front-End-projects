@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bungee+Inline');
+* {
+    font-family: "Amatic SC", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top:0;
+    display: flex;
+    flex-flow: row;
+    background-color: #000;
+    opacity:0.60;
+}
+a {
+    color: #ffffff;
+}
+.nav a {
+    font-size:25px;
+    display: block;
+    padding:7px 14px;
+    line-height: 1.5;
+}
+.nav:hover { 
+    opacity:1;
+}
+.nav a:hover ,.middle-header a:hover {
+    background-color: #a3a3a3;
+    color: #000000;
+}
+
+.home {
+    background: url('./asses/pizza.jpg') no-repeat center center/cover;
+    height: 90%;
+    filter: grayscale(60%);
+    -webkit-filter: grayscale(60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+}
+
+.middle-header {
+    width: 70%;
+    text-align: center;
+    font-size:100px;
+}
+
+.middle-header a{
+    font-size: 40px;
+    background-color: #000;
+    padding: 10px;
+
+}
+
+.open-time{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin:10px;
+    background-color: #000;
+    padding:0 8px;
+    font-size: 25px
+}
+
+.base-div{
+    background-color: #000;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.main-topic{
+    text-align: center;
+    font-size: 70px;
+}
+
+.menu-table {
+    background-color: #ffffff;
+    color: #000000;
+    width:60%;
+    border-collapse:collapse;
+    font-size: 25px;
+
+}
+
+.menu-table tr{
+    border-bottom: #a3a3a362 solid .2px;
+}
+
+th  {
+    font-size: 36px;
+    background-color: black;
+    
+}
+
+th:hover,.active {
+    background-color: rgb(241, 16, 16);
+}
+
+td  {
+    padding:35px 25px;
+    font-size: 25px;
+    color: #616161;
+}
+h2 {
+    text-align: left;
+    color: #000000;
+}
+
+.price {
+    border-radius:5px;
+    float: right;
+    color: #fff;
+    background-color: #616161;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    padding:5px 10px;
+    margin:50px 35px;
+}
+
+.tag{
+    border-radius: 5px;
+    font-weight: lighter;
+    color: #ffffff;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tag.new{
+    background-color: #a3a3a3;
+    color: #000000;
+}
+
+.tag.hot{
+    background-color: rgb(241, 16, 16);
+}
+
+p{
+    width: 60%;
+}
+
+.chef-image{
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20%;
+    margin-bottom: -5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.base-div.about{
+    background-color: #853732c3;
+    font-size: 25px;
+}
+
+.base-div.about > img ,.base-div.about > h1{
+    width: 60%;
+}
+
+.opening-time {
+    display: grid;
+    width: 60%;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.base-div.contact {
+    background-color: #6b7683;
+    font-size: 25px;
+    gap: 20px;
+    padding-top: 0px;
+}
+
+.contact-background-img {
+    width: 100%;
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+}
+
+.contact-fyi {
+    font-size: 30px;
+    background-color: #000;
+    padding: 3px 5px;
+}
+
+.contact-message { 
+    font-size: 30px ; 
+}
+
+.contact-form {
+    display: block;
+    width: 60%;
+    gap: 30px;
+}
+
+.contact-form input {
+    background-color: #ffffff;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    padding:16px 8px;
+    display: block;
+    width: 100%;
+    margin-bottom:40px;
+}
+
+#contact-submit {
+    color: #000000;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    width: calc(100% + 16px);
+}
+
+footer {
+    text-align: center;
+    align-items: center;
+    font-size: 35px;
+    height: 15%;
+    color: #ffffff;
+    background-color: #000000;
+    padding-top:50px ;
+}
+footer a {
+    border-bottom: #ffffff solid 2px;
+}
+
+footer a:hover {
+    color: green;
+    border-color: green;
+}
+@media (max-width:1200px) {
+    .menu-table,.contact-form ,.base-div.about > img ,.base-div.about > h1,.base-div.about > p ,.opening-time ,.contact > p ,.contact-form input {
+        width: 95%;
+    }
+    .about {
+        gap: 35px;
+    }
+    .about > h1{
+        text-align: start;
+    }
+    #contact-submit {
+        width: calc(95% + 16px);
+    }
+    footer {
+        height: 10%;
+    }
+}
+@media (max-width:768px) {
+    .menu-table,.contact-form ,.base-div.about > img ,.base-div.about > h1,.base-div.about > p ,.opening-time ,.contact > p ,.contact-form input {
+        width: 92%;
+    }
+    #contact-submit {
+        width: calc(92% + 16px);
+    }
+    .middle-header{
+        font-weight: 700;
+        font-size:70px;
+        line-height: 1.5;
+    }
+    .nav{
+        display:none
+    }
+    .chef-image{
+        right: 3%;
+    }
+
+}
