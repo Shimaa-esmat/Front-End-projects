@@ -45,3 +45,34 @@ h1 {
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
+
+@media (max-width:1200px) {
+    *{
+        font-size:30px;
+    }
+    .container{
+        padding: 30px;
+        width: 80%;  
+    }
+    h1 {
+        font-size:45px;
+
+}
+    .btn {
+        width: 150px;
+        height: 60px;
+    }
+
+
+}
+@media (max-width:768px) {
+    .container{
+        /* padding: 30px; */
+        width: 80%;
+    }
+
+
+
+    
+
+}
