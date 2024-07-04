@@ -4,6 +4,7 @@
     box-sizing: border-box;
     color: rgb(5, 5, 113);
 }
+
 .center-div{
     display: flex;
     flex-direction: column;
@@ -67,9 +68,21 @@ h1 {
 }
 @media (max-width:768px) {
     .container{
-        /* padding: 30px; */
         width: 80%;
+        flex-direction: column;
     }
+    h1 {
+        font-size:35px;
+    }
+    #amount {
+        width: 70%;
+    }
+    .btn {
+        font-size: 25px;
+        width: 120px;
+        height: 40px;
+    }
+    
 
 
 
